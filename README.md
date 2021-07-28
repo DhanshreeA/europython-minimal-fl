@@ -1,5 +1,7 @@
 **This demo is based on the Keras [tutorial](https://keras.io/examples/structured_data/structured_data_classification_from_scratch/) on structured data**
 
+This code is tested with Python 3.7.11, other Python versions may not work properly.
+
 To run this demo, make sure you have docker and docker-compose set up.
 
 Find the installation instructions for the above tools here: https://docs.docker.com/compose/install/ and https://docs.docker.com/compose/install/
