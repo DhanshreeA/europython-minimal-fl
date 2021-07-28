@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+    kafka:
+        image: krisgeus/docker-kafka
+        container_name: kafka
+        restart: always
+        ports:
+            - "9092:9092"
+            - "9093:9093"
+        environment:
+            - ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,INTERNAL://localhost:9093
+            - LISTENERS=PLAINTEXT://0.0.0.0:9092,INTERNAL://0.0.0.0:9093
+            - SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,INTERNAL:PLAINTEXT
+            - NUM_PARTITIONS=1
+            - INTER_BROKER=INTERNAL
+            - KAFKA_CREATE_TOPICS="updates"
