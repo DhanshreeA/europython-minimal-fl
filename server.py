@@ -16,7 +16,7 @@ from modeling_utils import load_model_and_data, encode, decode
 
 
 class Server:
-    def __init__(self, min_nodes: int = 2, rounds: int = 3):
+    def __init__(self, min_nodes: int = 2, rounds: int = 10):
         self.sio = socketio.AsyncServer(async_mode="aiohttp")
         self.app = web.Application()
         self.sio.attach(self.app)
