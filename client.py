@@ -9,7 +9,7 @@ from modeling_utils import _load_data, encode, decode
 
 
 class Node:
-    def __init__(self, address, partition, client, epochs=1):
+    def __init__(self, address, partition, client, epochs=5):
         self.client = client
         self.server = address
         self.sio = socketio.Client()
